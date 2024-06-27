@@ -12,16 +12,24 @@ display=[]
 
 for _ in range(length_of_list):
     display+="_"
-print(display)
 
-guess=input("enter the letter to check")
+end_of_game = False
 
-for position in range(length_of_list):
-    letter=chosen_word[position]
+while not end_of_game:
 
-    if letter==guess:
-        display[position]=letter
 
-print(display)
+    guess=input("enter the letter to check ")
+
+    for position in range(length_of_list):
+        letter=chosen_word[position]
+
+        if letter==guess:
+            display[position]=letter
+
+    print(display)
+
+    if "_" not in display:
+        end_of_game == True
+        print("you win")
 
 

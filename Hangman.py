@@ -22,6 +22,7 @@ while not end_of_game:
 
     for position in range(length_of_list):
         letter=chosen_word[position]
+        print(f"position is {position}")
 
         if letter==guess:
             display[position]=letter
